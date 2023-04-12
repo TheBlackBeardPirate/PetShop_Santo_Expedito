@@ -1,0 +1,9 @@
+DEBUG = True
+
+USERNAME = 'root'
+PASSWORD = 'superSecret'
+SERVER = '127.0.0.1'
+DB = 'petshop'
+
+SQLALCHEMY_DATABASE_URI = f'mysql://{USERNAME}:{PASSWORD}@{SERVER}/{DB}'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
