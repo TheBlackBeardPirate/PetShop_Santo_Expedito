@@ -1,1 +1,4 @@
-
+# Ignore os arquivos de cache de IDE
+API/__pychache__
+API/.idea
+API/api/__pycache__
