@@ -8,6 +8,8 @@
 
 ⇨ CRUD de Animais ✅
 
+⇨ CRUD de Médico Veterinário
+
 ⇨ Controle de Estoque
 
 ⇨ Agendamento de Consultas
