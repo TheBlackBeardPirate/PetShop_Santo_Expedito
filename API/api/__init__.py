@@ -15,5 +15,5 @@ ma = Marshmallow(app)
 migrate = Migrate(app, db)
 api = Api(app)
 
-from .views import cliente_view, animal_view
-from .models import cliente_model, animal_model
+from .views import cliente_view, animal_view, veterinario_view
+from .models import cliente_model, animal_model, veterinario_model

@@ -31,4 +31,20 @@ POST http://127.0.0.1:5000/animal
     "cliente_id": 1
 }
 
+[+] CADASTRAR MÉDICO VETERINÁRIO
+{
+	"nome":"Tyne Wheowall",
+	"crmv":"72481-JB",
+	"endereco":"52507 Mifflin Lane",
+	"cidade":"Santa Barbara",
+	"uf":"CA",
+	"cep":"93111",
+	"tel_emergencia":"10090719077",
+	"email":"twheowall9@pcworld.com",
+	"hora_atendimento":"aliquam lacus morbi quis",
+	"efetivo":false,
+	"valor_pagar":3380.55
+}
+
+
 [+] Fazer o arquivo de documentação YAML
