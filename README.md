@@ -8,7 +8,7 @@
 
 ⇨ CRUD de Animais ✅
 
-⇨ CRUD de Médico Veterinário
+⇨ CRUD de Médico Veterinário ✅
 
 ⇨ Controle de Estoque
 
