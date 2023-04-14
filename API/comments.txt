@@ -32,6 +32,7 @@ POST http://127.0.0.1:5000/animal
 }
 
 [+] CADASTRAR MÉDICO VETERINÁRIO
+POST http://127.0.0.1:5000/veterinario
 {
 	"nome":"Tyne Wheowall",
 	"crmv":"72481-JB",
@@ -46,5 +47,39 @@ POST http://127.0.0.1:5000/animal
 	"valor_pagar":3380.55
 }
 
+[+] CADASTRAR CONSULTA
+POST http://127.0.0.1:5000/consulta
+{
+	"horario":"2023-04-15 06:30:00",
+	"nome_cliente":"Elena Cruickshank",
+	"cpf_cliente":"23166394491",
+	"cliente_premium":true,
+	"nome_animal":"Tofino Harbour Seaplane Base",
+	"raca":"Melanesian",
+	"emergencia":true,
+	"nome_vet":"Rochelle Battie",
+	"vet_efetivo":true,
+	"crmv":"16606-ZB",
+	"valor":1391.33
+}
 
 [+] Fazer o arquivo de documentação YAML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
