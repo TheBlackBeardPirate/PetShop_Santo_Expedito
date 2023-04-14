@@ -8,11 +8,11 @@
 
 ⇨ CRUD de Animais ✅
 
-⇨ CRUD de Médico Veterinário
-
-⇨ Controle de Estoque
+⇨ CRUD de Médico Veterinário ✅
 
 ⇨ Agendamento de Consultas
+
+⇨ Controle de Estoque
 
 ⇨ CRUD de Usuários
 
