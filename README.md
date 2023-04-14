@@ -10,7 +10,7 @@
 
 ⇨ CRUD de Médico Veterinário ✅
 
-⇨ Agendamento de Consultas
+⇨ Agendamento de Consultas ✅
 
 ⇨ Controle de Estoque
 
