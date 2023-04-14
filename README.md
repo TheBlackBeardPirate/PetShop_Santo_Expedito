@@ -2,7 +2,7 @@
 
 ## Projeto para a disciplina de Engenharia de Software I
 
-### API RESTful em python com a framework flask
+### API RESTful em Python com a framework Flask
 
 ⇨ CRUD de Clientes ✅
 
