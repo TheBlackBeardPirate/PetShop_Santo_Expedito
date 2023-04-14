@@ -10,9 +10,9 @@
 
 ⇨ CRUD de Médico Veterinário
 
-⇨ Controle de Estoque
-
 ⇨ Agendamento de Consultas
+
+⇨ Controle de Estoque
 
 ⇨ CRUD de Usuários
 
