@@ -2,7 +2,7 @@
 
 ## Projeto para a disciplina de Engenharia de Software I
 
-### API RESTful em python com a framework flask
+### API RESTful em Python com a framework Flask
 
 ⇨ CRUD de Clientes ✅
 
@@ -10,7 +10,7 @@
 
 ⇨ CRUD de Médico Veterinário ✅
 
-⇨ Agendamento de Consultas
+⇨ Agendamento de Consultas ✅
 
 ⇨ Controle de Estoque
 
