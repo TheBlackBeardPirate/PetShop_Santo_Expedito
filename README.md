@@ -12,7 +12,7 @@
 
 ⇨ Agendamento de Consultas ✅
 
-⇨ Controle de Estoque
+⇨ Controle de Estoque ✅
 
 ⇨ CRUD de Usuários
 
