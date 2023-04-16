@@ -2,11 +2,10 @@ from api import api
 from flask import make_response, jsonify, request
 from flask_restful import Resource
 from datetime import datetime
-from ..paginate import paginate
 from ..entidades import consulta
-from ..models.consulta_model import Consulta
 from ..schemas import consulta_schema
 from ..services import consulta_service
+from ..decorator import admin_required
 
 
 def valida_data(horario):
@@ -15,12 +14,15 @@ def valida_data(horario):
 
 
 class ConsultaList(Resource):
+
+    @admin_required()
     def get(self):
         consultas = consulta_service.listar_consultas()
         cs = consulta_schema.ConsultaSchema(many=True)
         # return paginate(Consulta, cs)
         return make_response(cs.jsonify(consultas), 200)
 
+    @admin_required()
     def post(self):
         cs = consulta_schema.ConsultaSchema()
         validate = cs.validate(request.json)
@@ -52,6 +54,8 @@ class ConsultaList(Resource):
 
 
 class ConsultaDetail(Resource):
+
+    @admin_required()
     def get(self, id):
         consulta_bd = consulta_service.listar_consulta_id(id=id)
         if consulta_bd is None:
@@ -60,6 +64,7 @@ class ConsultaDetail(Resource):
         cs = consulta_schema.ConsultaSchema()
         return make_response(cs.jsonify(consulta_bd), 200)
 
+    @admin_required()
     def put(self, id):
         consulta_bd = consulta_service.listar_consulta_id(id=id)
         if consulta_bd is None:
@@ -93,6 +98,7 @@ class ConsultaDetail(Resource):
         consulta_service.editar_consulta(consulta_anterior=consulta_bd, consulta_nova=consulta_nova)
         return make_response(cs.jsonify(consulta_nova), 200)
 
+    @admin_required()
     def delete(self, id):
         consulta_bd = consulta_service.listar_consulta_id(id=id)
         if consulta_bd is None:

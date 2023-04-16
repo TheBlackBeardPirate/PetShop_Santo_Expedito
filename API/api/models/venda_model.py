@@ -10,3 +10,4 @@ class Venda(db.Model):
     met_pagamento = db.Column(db.String(50), nullable=False)
     data_hora = db.Column(db.DateTime, nullable=False)
     cliente_id = db.Column(db.Integer, db.ForeignKey('cliente.id'))
+    vendedor_id = db.Column(db.Integer, db.ForeignKey('usuario.id'))

@@ -6,6 +6,7 @@ from ..models.produto_model import Produto
 from ..entidades import produto
 from ..services import produto_service
 from ..paginate import paginate
+from ..decorator import admin_required
 
 
 class ProdutoList(Resource):
@@ -15,6 +16,7 @@ class ProdutoList(Resource):
         # produtos = produto_service.listar_produtos()
         # return make_response(ps.jsonify(produtos), 200)
 
+    @admin_required()
     def post(self):
         ps = produto_schema.ProdutoSchema()
         validate = ps.validate(request.json)
@@ -51,6 +53,7 @@ class ProdutoDetail(Resource):
         ps = produto_schema.ProdutoSchema()
         return make_response(ps.jsonify(produto_bd), 200)
 
+    @admin_required()
     def put(self, id):
         produto_bd = produto_service.listar_produto_id(id=id)
         if produto_bd is None:
@@ -81,6 +84,7 @@ class ProdutoDetail(Resource):
         produto_service.atualizar_produto(produto_antigo=produto_bd, produto_novo=produto_novo)
         return make_response(ps.jsonify(produto_novo), 200)
 
+    @admin_required()
     def delete(self, id):
         produto_bd = produto_service.listar_produto_id(id=id)
         if produto_bd is None:

@@ -1,4 +1,6 @@
-# PetShop Santo Expedito
+# PetShop Santo Expedito (Fictício)
+# do livro Sbrocco, José Henrique Teixeira de, C. e Paulo Cesar de Macedo.
+# Metodologias Ágeis - Engenharia de Software sob Medida.
 
 ## Projeto para a disciplina de Engenharia de Software I
 
@@ -14,6 +16,6 @@
 
 ⇨ Controle de Estoque ✅
 
-⇨ CRUD de Usuários
+⇨ CRUD de Usuários ✅
 
 ⇨ CRUD de Fornecedores

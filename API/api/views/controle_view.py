@@ -4,9 +4,12 @@ from datetime import datetime
 from flask import make_response, jsonify, request
 from ..services import controle_service
 from ..models import venda_model
+from ..decorator import admin_required
 
 
 class ControleList(Resource):
+
+    @admin_required()
     def post(self):
         nf = []
         ids = []

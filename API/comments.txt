@@ -1,3 +1,6 @@
+[+] DISCLAiMER
+TODOS OS DADOS PRESENTES NESTE ARQUIVO SÃO FICTÍCIOS E GERADOS EM https://www.mockaroo.com
+
 [+] CADASTRAR CLIENTE
 POST http://127.0.0.1:5000/cliente
 
@@ -61,6 +64,40 @@ POST http://127.0.0.1:5000/consulta
 	"vet_efetivo":true,
 	"crmv":"16606-ZB",
 	"valor":1391.33
+}
+
+[+] CADASTRAR USUARIO
+POST http://127.0.0.1:5000/usuario
+{
+	"nome":"Rosie Conyer",
+	"endereco":"10th Floor",
+	"cidade":"Fort Collins",
+	"uf":"CO",
+	"cep":"46185405",
+	"tel_resid":"4705736499",
+	"tel_cel":"84009925207"
+	,"email":"rconyer0@foxnews.com",
+	"rg":"63913470",
+	"cpf":"89064626914",
+	"nascimento":"1996-06-22",
+	"senha":"gRAmGTRoGAT",
+	"is_admin":true
+}
+
+[+] CADASTRAR PRODUTO
+POST http://127.0.0.1:5000/produto
+{
+	"codigo":"SASO",
+	"descricao":"id",
+	"unidade_medida":"tempus",
+	"medida":2961,
+	"quantidade_estoque":1127,
+	"valor_custo":2864.25,
+	"valor_venda":4470.53,
+	"cor":"Red",
+	"tipo":"massa id",
+	"fabricante":"Topicshots",
+	"quantidade_min_estoque":334.76
 }
 
 [+] Fazer o arquivo de documentação YAML

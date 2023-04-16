@@ -6,15 +6,19 @@ from ..services import animal_service
 from ..schemas import animal_schema
 from ..models.animal_model import Animal
 from ..paginate import paginate
+from ..decorator import admin_required
 
 
 class AnimalList(Resource):
+
+    @admin_required()
     def get(self):
         # animais = animal_service.listar_animal()
         asc = animal_schema.AnimalSchema(many=True)
         # return make_response(asc.jsonify(animais), 200)
         return paginate(Animal, asc)
 
+    @admin_required()
     def post(self):
         asc = animal_schema.AnimalSchema()
         validate = asc.validate(request.json)
@@ -40,6 +44,8 @@ class AnimalList(Resource):
 
 
 class AnimalDetail(Resource):
+
+    @admin_required()
     def get(self, id):
         animal_bd = animal_service.listar_animal_id(id=id)
         if animal_bd is None:
@@ -48,6 +54,7 @@ class AnimalDetail(Resource):
         asc = animal_schema.AnimalSchema()
         return make_response(asc.jsonify(animal_bd), 200)
 
+    @admin_required()
     def put(self, id):
         animal_bd = animal_service.listar_animal_id(id=id)
         if animal_bd is None:
@@ -73,6 +80,7 @@ class AnimalDetail(Resource):
         animal_service.atualizar_animal(animal_anterior=animal_bd, animal_novo=animal_novo)
         return make_response(asc.jsonify(animal_novo), 200)
 
+    @admin_required()
     def delete(self,  id):
         animal_bd = animal_service.listar_animal_id(id=id)
         if animal_bd is None:

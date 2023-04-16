@@ -7,6 +7,7 @@ from ..services import cliente_service
 from ..schemas import cliente_schema
 from ..paginate import paginate
 from ..models.cliente_model import Cliente
+from ..decorator import admin_required
 
 
 def valida_data(nascimento):
@@ -17,12 +18,15 @@ def valida_data(nascimento):
 
 
 class ClienteList(Resource):
+
+    @admin_required()
     def get(self):
         # clientes = cliente_service.listar_clientes()
         cs = cliente_schema.ClienteSchema(many=True)
         # return make_response(cs.jsonify(clientes), 200)
         return paginate(Cliente, cs)
 
+    @admin_required()
     def post(self):
         cs = cliente_schema.ClienteSchema()
         validate = cs.validate(request.json)
@@ -57,6 +61,8 @@ class ClienteList(Resource):
 
 
 class ClienteDetail(Resource):
+
+    @admin_required()
     def get(self, id):
         cliente_bd = cliente_service.listar_cliente_id(id=id)
         if cliente_bd is None:
@@ -65,6 +71,7 @@ class ClienteDetail(Resource):
         cs = cliente_schema.ClienteSchema()
         return make_response(cs.jsonify(cliente_bd), 200)
 
+    @admin_required()
     def put(self, id):
         cliente_bd = cliente_service.listar_cliente_id(id)
         if cliente_bd is None:
@@ -97,6 +104,7 @@ class ClienteDetail(Resource):
         cliente_service.atualizar_cliente(cliente_anterior=cliente_bd, cliente_novo=cliente_novo)
         return make_response(cs.jsonify(cliente_novo), 200)
 
+    @admin_required()
     def delete(self, id):
         cliente_bd = cliente_service.listar_cliente_id(id=id)
         if cliente_bd is None:
