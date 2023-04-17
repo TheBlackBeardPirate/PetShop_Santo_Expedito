@@ -34,7 +34,7 @@ class LoginList(Resource):
         if not usuario_bd.decrip_senha(senha=senha):
             return make_response(jsonify('Senha incorreta!'), 401)
 
-        access_token = create_access_token(identity=usuario_bd.id, expires_delta=timedelta(seconds=100))
+        access_token = create_access_token(identity=usuario_bd.id, expires_delta=timedelta(seconds=300))
 
         refresh_token = create_refresh_token(identity=usuario_bd.id)
 

@@ -15,5 +15,5 @@ class Produto(db.Model):
     tipo = db.Column(db.String(50), nullable=False)
     fabricante = db.Column(db.String(50), nullable=False)
     quantidade_min_estoque = db.Column(db.Integer, nullable=False)
-    # fornecedor_id = db.Column(db.Integer, db.ForeignKey('fornecedor.id'))
+    fornecedor_id = db.Column(db.Integer, db.ForeignKey('fornecedor.id'))
     # Sugerir data de validade

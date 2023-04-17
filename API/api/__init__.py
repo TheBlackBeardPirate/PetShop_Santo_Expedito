@@ -17,5 +17,5 @@ migrate = Migrate(app, db)
 api = Api(app)
 jwt = JWTManager(app)
 
-from .views import cliente_view, animal_view, veterinario_view, consulta_view, produto_view, controle_view, usuario_view, login_view, refresh_token_view
-from .models import cliente_model, animal_model, veterinario_model, consulta_model, produto_model, venda_model, usuario_model
+from .views import cliente_view, animal_view, veterinario_view, consulta_view, produto_view, controle_view, usuario_view, login_view, refresh_token_view, fornecedor_view
+from .models import cliente_model, animal_model, veterinario_model, consulta_model, produto_model, venda_model, usuario_model, fornecedor_model

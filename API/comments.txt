@@ -6,7 +6,7 @@ POST http://127.0.0.1:5000/cliente
 
 {
     "nome": "André Gutierez",
-    "endereco": "Rua Emanoel Teixeira, número 23, cond. Vila verde, ap 22, bloco c",
+    "endereco": "Rua Emanoel Teixeira, número 23, cond. Vila Maria, ap 22, bloco c",
     "cidade": "Cuiabá",
     "uf": "MT",
     "cep": "78000000",

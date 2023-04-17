@@ -35,11 +35,12 @@ class ProdutoList(Resource):
         tipo = request.json['tipo']
         fabricante = request.json['fabricante']
         quantidade_min_estoque = request.json['quantidade_min_estoque']
+        fornecedor_id = request.json['fornecedor_id']
 
         produto_novo = produto.Produto(codigo=codigo, descricao=descricao, unidade_medida=unidade_medida, medida=medida,
                                        quantidade_estoque=quantidade_estoque, valor_custo=valor_custo, tipo=tipo,
                                        valor_venda=valor_venda, cor=cor, fabricante=fabricante,
-                                       quantidade_min_estoque=quantidade_min_estoque)
+                                       quantidade_min_estoque=quantidade_min_estoque, fornecedor_id=fornecedor_id)
         produto_service.cadastrar_produto(produto_novo)
         return make_response(ps.jsonify(produto_novo), 200)
 
@@ -76,11 +77,12 @@ class ProdutoDetail(Resource):
         tipo = request.json['tipo']
         fabricante = request.json['fabricante']
         quantidade_min_estoque = request.json['quantidade_min_estoque']
+        fornecedor_id = request.json['fornecedor_id']
 
         produto_novo = produto.Produto(codigo=codigo, descricao=descricao, unidade_medida=unidade_medida, medida=medida,
                                        quantidade_estoque=quantidade_estoque, valor_custo=valor_custo, tipo=tipo,
                                        valor_venda=valor_venda, cor=cor, fabricante=fabricante,
-                                       quantidade_min_estoque=quantidade_min_estoque)
+                                       quantidade_min_estoque=quantidade_min_estoque, fornecedor_id=fornecedor_id)
         produto_service.atualizar_produto(produto_antigo=produto_bd, produto_novo=produto_novo)
         return make_response(ps.jsonify(produto_novo), 200)
 

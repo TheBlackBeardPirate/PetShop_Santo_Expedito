@@ -7,7 +7,8 @@ def cadastrar_produto(produto):
                                        unidade_medida=produto.unidade_medida, valor_custo=produto.valor_custo,
                                        quantidade_estoque=produto.quantidade_estoque, valor_venda=produto.valor_venda,
                                        cor=produto.cor, tipo=produto.tipo, fabricante=produto.fabricante,
-                                       quantidade_min_estoque=produto.quantidade_min_estoque)
+                                       quantidade_min_estoque=produto.quantidade_min_estoque,
+                                       fornecedor_id=produto.fornecedor_id)
     db.session.add(produto_bd)
     db.session.commit()
 
@@ -34,7 +35,7 @@ def atualizar_produto(produto_antigo, produto_novo):
     produto_antigo.tipo = produto_novo.tipo
     produto_antigo.fabricante = produto_novo.fabricante
     produto_antigo.quantidade_min_estoque = produto_novo.quantidade_min_estoque
-    # produto_antigo.fornecedor_id = produto_novo.fornecedor_id
+    produto_antigo.fornecedor_id = produto_novo.fornecedor_id
     db.session.commit()
 
 

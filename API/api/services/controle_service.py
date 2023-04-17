@@ -14,13 +14,11 @@ def id_cliente_cpf(cpf):
 
 def nome_produto_codigo(codigo):
     produto_db = produto_model.Produto.query.filter_by(codigo=codigo).first()
-    # produto_db = db.session.query(produto_model.Produto.descricao).filter(produto_model.Produto.codigo == codigo)
     return produto_db.descricao
 
 
 def valor_venda_produto_codigo(codigo):
     produto_db = produto_model.Produto.query.filter_by(codigo=codigo).first()
-    # produto_db = db.session.query(produto_model.Produto.valor_venda).filter(produto_model.Produto.codigo == codigo)
     return produto_db.valor_venda
 
 
@@ -39,6 +37,5 @@ def venda_realizada(venda):
 
 def atualiza_estoque(codigo, qtd):
     produto_db = produto_model.Produto.query.filter_by(codigo=codigo).first()
-    # produto_db = db.session.query(produto_model.Produto).filter_by(produto_model.Produto.codigo == codigo)
     produto_db.quantidade_estoque -= qtd
     db.session.commit()

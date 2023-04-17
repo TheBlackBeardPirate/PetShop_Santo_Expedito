@@ -10,7 +10,7 @@ class ProdutoSchema(ma.SQLAlchemyAutoSchema):
         include_fk = True
         include_relationship = True
         fields = ('id', 'codigo', 'descricao', 'unidade_medida', 'medida', 'quantidade_estoque', 'valor_custo',
-                  'valor_venda', 'cor', 'tipo', 'fabricante', 'quantidade_min_estoque')
+                  'valor_venda', 'cor', 'tipo', 'fabricante', 'quantidade_min_estoque', 'fornecedor_id')
 
     codigo = fields.String(required=True)
     descricao = fields.String(required=True)
@@ -23,5 +23,5 @@ class ProdutoSchema(ma.SQLAlchemyAutoSchema):
     tipo = fields.String(required=True)
     fabricante = fields.String(required=True)
     quantidade_min_estoque = fields.Integer(required=True)
-    # fornecedor_id = fields.Integer(required=True)
+    fornecedor_id = fields.Integer(required=True)
     # Sugerir data de validade

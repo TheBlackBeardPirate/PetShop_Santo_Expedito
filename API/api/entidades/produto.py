@@ -1,6 +1,6 @@
 class Produto:
     def __init__(self, codigo, descricao, unidade_medida, medida, quantidade_estoque, valor_custo, valor_venda, cor,
-                 tipo, fabricante, quantidade_min_estoque):
+                 tipo, fabricante, quantidade_min_estoque, fornecedor_id):
         self.__codigo = codigo
         self.__descricao = descricao
         self.__unidade_medida = unidade_medida
@@ -12,7 +12,7 @@ class Produto:
         self.__tipo = tipo
         self.__fabricante = fabricante
         self.__quantidade_min_estoque = quantidade_min_estoque
-        # self.__fornecedor_id = fornecedor_id
+        self.__fornecedor_id = fornecedor_id
         # Sugerir data de validade
 
     @property
@@ -102,7 +102,7 @@ class Produto:
     @quantidade_min_estoque.setter
     def quantidade_min_estoque(self, quantidade_min_estoque):
         self.__quantidade_min_estoque = quantidade_min_estoque
-"""
+
     @property
     def fornecedor_id(self):
         return self.__fornecedor_id
@@ -110,4 +110,3 @@ class Produto:
     @fornecedor_id.setter
     def fornecedor_id(self, fornecedor_id):
         self.__fornecedor_id = fornecedor_id
-"""
