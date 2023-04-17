@@ -1,6 +1,7 @@
 # PetShop Santo Expedito (Fictício)
-# do livro Sbrocco, José Henrique Teixeira de, C. e Paulo Cesar de Macedo.
-# Metodologias Ágeis - Engenharia de Software sob Medida.
+
+#### Do livro Sbrocco, José Henrique Teixeira de, C. e Paulo Cesar de Macedo.
+#### Metodologias Ágeis - Engenharia de Software sob Medida.
 
 ## Projeto para a disciplina de Engenharia de Software I
 
