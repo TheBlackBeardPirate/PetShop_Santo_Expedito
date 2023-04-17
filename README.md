@@ -19,4 +19,4 @@
 
 ⇨ CRUD de Usuários ✅
 
-⇨ CRUD de Fornecedores
+⇨ CRUD de Fornecedores ✅
